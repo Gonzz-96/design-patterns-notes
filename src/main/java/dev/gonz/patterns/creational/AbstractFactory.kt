@@ -32,9 +32,10 @@ private class KantoFactory : PokemonFactory() {
     override fun newGrassPokemon(): InitialPokemon.GrassPokemon = Bulbasaur
 }
 
-object Squirtle : InitialPokemon.WaterPokemon
-object Bulbasaur : InitialPokemon.GrassPokemon
-object Charmander : InitialPokemon.FirePokemon
+sealed interface KantoPokemon
+object Squirtle : KantoPokemon, InitialPokemon.WaterPokemon
+object Bulbasaur : KantoPokemon, InitialPokemon.GrassPokemon
+object Charmander : KantoPokemon, InitialPokemon.FirePokemon
 
 private class JohtoFactory : PokemonFactory() {
     override fun newFirePokemon(): InitialPokemon.FirePokemon = Cyndaquil
@@ -42,9 +43,10 @@ private class JohtoFactory : PokemonFactory() {
     override fun newGrassPokemon(): InitialPokemon.GrassPokemon = Chikorita
 }
 
-object Totodile : InitialPokemon.WaterPokemon
-object Chikorita : InitialPokemon.GrassPokemon
-object Cyndaquil : InitialPokemon.FirePokemon
+sealed interface JohtoPokemon
+object Totodile : JohtoPokemon, InitialPokemon.WaterPokemon
+object Chikorita : JohtoPokemon, InitialPokemon.GrassPokemon
+object Cyndaquil : JohtoPokemon, InitialPokemon.FirePokemon
 
 private class HoennFactory : PokemonFactory() {
     override fun newFirePokemon(): InitialPokemon.FirePokemon = Torchic
@@ -52,6 +54,7 @@ private class HoennFactory : PokemonFactory() {
     override fun newGrassPokemon(): InitialPokemon.GrassPokemon = Tricko
 }
 
-object Mudkip : InitialPokemon.WaterPokemon
-object Tricko : InitialPokemon.GrassPokemon
-object Torchic : InitialPokemon.FirePokemon
+sealed interface  HoennPokemon
+object Mudkip : HoennPokemon, InitialPokemon.WaterPokemon
+object Tricko : HoennPokemon,  InitialPokemon.GrassPokemon
+object Torchic : HoennPokemon, InitialPokemon.FirePokemon

@@ -1,6 +1,5 @@
 package dev.gonz.patterns.creational
 
-import org.junit.Assert.*
 import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertIs

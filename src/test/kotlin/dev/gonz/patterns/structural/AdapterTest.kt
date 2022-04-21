@@ -11,8 +11,8 @@ class AdapterTest {
         val adapter = DigimonAdapter(digimon)
         val pokemonTrainer = PokemonTrainer(adapter)
 
-        val result = pokemonTrainer.launchFireAttack()
+        val result = pokemonTrainer.launchAttack()
 
-        assertEquals(expected = "Fire Attack was launched", actual = result)
+        assertEquals(expected = Attack.FIRE, actual = result)
     }
 }

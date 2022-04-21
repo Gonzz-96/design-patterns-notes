@@ -3,6 +3,7 @@ package dev.gonz.patterns.creational
 import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
+import kotlin.test.assertNotSame
 import kotlin.test.assertTrue
 
 class PrototypeTest {
@@ -18,9 +19,9 @@ class PrototypeTest {
         val waterPokemon = genericPokemonFactory.cloneWaterPokemon()
         val grassPokemon = genericPokemonFactory.cloneGrassPokemon()
 
-        assertTrue(firePrototype !== firePokemon)
-        assertTrue(waterPrototype !== waterPokemon)
-        assertTrue(grassPrototype !== grassPokemon)
+        assertNotSame(illegal = firePrototype, actual = firePokemon)
+        assertNotSame(illegal = waterPrototype, actual = waterPokemon)
+        assertNotSame(illegal = grassPrototype, actual = grassPokemon)
         assertEquals(expected = firePrototype.power, actual = firePokemon.power)
         assertEquals(expected = waterPrototype.power, actual = waterPokemon.power)
         assertEquals(expected = grassPrototype.power, actual = grassPokemon.power)
@@ -37,9 +38,9 @@ class PrototypeTest {
         val waterPokemon = genericPokemonFactory.cloneWaterPokemon(newPower = 75)
         val grassPokemon = genericPokemonFactory.cloneGrassPokemon(newPower = 10)
 
-        assertTrue(firePrototype !== firePokemon)
-        assertTrue(waterPrototype !== waterPokemon)
-        assertTrue(grassPrototype !== grassPokemon)
+        assertNotSame(illegal = firePrototype, actual = firePokemon)
+        assertNotSame(illegal = waterPrototype, actual = waterPokemon)
+        assertNotSame(illegal = grassPrototype, actual = grassPokemon)
         assertNotEquals(illegal = firePrototype.power, actual = firePokemon.power)
         assertNotEquals(illegal = waterPrototype.power, actual = waterPokemon.power)
         assertNotEquals(illegal = grassPrototype.power, actual = grassPokemon.power)

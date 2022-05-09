@@ -2,6 +2,7 @@ package dev.gonz.patterns.structural
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertIs
 
 class DecoratorTest {
 
@@ -14,6 +15,7 @@ class DecoratorTest {
 
         val drawingResult = visualComponent.draw()
 
+        assertIs<BorderDecorator>((visualComponent as? Decorator)?.visualComponent)
         assertEquals(
             expected = "ScrollableDecorator -> BorderDecorator -> TextView",
             actual = drawingResult,
@@ -29,6 +31,7 @@ class DecoratorTest {
 
         val drawingResult = visualComponent.draw()
 
+        assertIs<ScrollableDecorator>((visualComponent as? Decorator)?.visualComponent)
         assertEquals(
             expected = "BorderDecorator -> ScrollableDecorator -> TextView",
             actual = drawingResult,

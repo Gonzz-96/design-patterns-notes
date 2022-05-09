@@ -23,7 +23,6 @@ abstract class Decorator(
 }
 
 // implementations of decorator
-
 class BorderDecorator(
     visualComponent: VisualComponent,
 ) : Decorator(visualComponent) {

@@ -26,5 +26,4 @@ class ProxyTest {
         image.draw()
         image.changeColor(Image.Color.blue) // throws
     }
-
 }

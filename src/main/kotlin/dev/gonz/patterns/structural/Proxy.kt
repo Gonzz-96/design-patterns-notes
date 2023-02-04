@@ -8,7 +8,7 @@ interface Image {
 
     enum class Color {
         red,
-        blue
+        blue,
     }
 }
 

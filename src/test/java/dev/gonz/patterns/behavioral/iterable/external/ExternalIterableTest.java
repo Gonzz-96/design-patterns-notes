@@ -2,6 +2,7 @@ package dev.gonz.patterns.behavioral.iterable.external;
 
 import static org.junit.Assert.*;
 
+import dev.gonz.patterns.behavioral.iterable.AbstractList;
 import org.junit.Test;
 import java.util.ArrayList;
 

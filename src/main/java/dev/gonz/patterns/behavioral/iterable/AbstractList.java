@@ -1,4 +1,6 @@
-package dev.gonz.patterns.behavioral.iterable.external;
+package dev.gonz.patterns.behavioral.iterable;
+
+import dev.gonz.patterns.behavioral.iterable.external.Iterator;
 
 public abstract class AbstractList<T> {
 

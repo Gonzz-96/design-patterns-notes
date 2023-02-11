@@ -1,5 +1,7 @@
 package dev.gonz.patterns.behavioral.iterable.external;
 
+import dev.gonz.patterns.behavioral.iterable.AbstractList;
+
 public class PersonForwardIterator implements Iterator<Person> {
 
     private int currentIndex = 0;

@@ -1,6 +1,7 @@
 package dev.gonz.patterns.behavioral.iterable.external;
 
 import dev.gonz.patterns.behavioral.iterable.AbstractList;
+import dev.gonz.patterns.behavioral.iterable.Person;
 
 public class PersonForwardList extends AbstractList<Person> {
 

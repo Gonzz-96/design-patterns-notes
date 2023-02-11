@@ -1,4 +1,4 @@
-package dev.gonz.patterns.behavioral.iterable.external;
+package dev.gonz.patterns.behavioral.iterable;
 
 public class Person {
     final private String name;

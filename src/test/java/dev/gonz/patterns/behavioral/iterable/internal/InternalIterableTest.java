@@ -2,7 +2,6 @@ package dev.gonz.patterns.behavioral.iterable.internal;
 
 import dev.gonz.patterns.behavioral.iterable.AbstractList;
 import dev.gonz.patterns.behavioral.iterable.Person;
-import dev.gonz.patterns.behavioral.iterable.external.PersonBackwardList;
 import dev.gonz.patterns.behavioral.iterable.external.PersonForwardList;
 import org.junit.Test;
 
@@ -14,7 +13,7 @@ public class InternalIterableTest {
 
     @Test
     public void givenAnInternalIterable_whenPasserdInAnOperation_thenExpectListWithResults() {
-        AbstractList<Person> list = new PersonBackwardList(new Person("Gonz", 26), new Person("Abril", 24));
+        AbstractList<Person> list = new PersonForwardList(new Person("Gonz", 26), new Person("Abril", 24));
         Iterator<Person> iterator = new PersonForwardIterator(list);
         ArrayList<String> resultList = new ArrayList<>();
 

@@ -54,6 +54,5 @@ class CommandTests {
             expected = listOf(openDocument, saveDocument, closeDocument),
             actual = commandsCalled,
         )
-
     }
 }

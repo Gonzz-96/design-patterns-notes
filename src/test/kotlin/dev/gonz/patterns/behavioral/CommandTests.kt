@@ -39,11 +39,11 @@ class CommandTests {
         val openDocument = OpenDocumentCommand(document)
         val saveDocument = SaveDocumentCommand(document, "my_new_file.txt")
         val closeDocument = CloseDocumentCommand(document)
-        val macroCommand: Command = MacroCommand().apply {
-            add(openDocument)
-            add(saveDocument)
-            add(closeDocument)
-        }
+        val macroCommand: Command = MacroCommand(
+            openDocument,
+            saveDocument,
+            closeDocument,
+        )
         every { openDocument.execute() } answers { commandsCalled.add(openDocument) }
         every { saveDocument.execute() } answers { commandsCalled.add(saveDocument) }
         every { closeDocument.execute() } answers { commandsCalled.add(closeDocument) }

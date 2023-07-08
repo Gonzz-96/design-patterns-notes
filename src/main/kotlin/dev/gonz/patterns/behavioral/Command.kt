@@ -14,19 +14,12 @@ interface Command {
     fun execute()
 }
 
-class MacroCommand : Command {
-    private val commands = mutableListOf<Command>()
+class MacroCommand(
+    vararg val commands: Command,
+) : Command {
 
     override fun execute() {
         commands.forEach(Command::execute)
-    }
-
-    fun add(command: Command) {
-        commands.add(command)
-    }
-
-    fun remove(command: Command) {
-        commands.remove(command)
     }
 }
 

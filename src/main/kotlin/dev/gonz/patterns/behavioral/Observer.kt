@@ -62,6 +62,13 @@ class StringSubject : Subject() {
     }
 }
 
+// a better implementation can be reviewed in the RxJava library.
+// The observables only expose the type they contain instead of creating a concrete implementation
+// for every existing type. This example was thought with the book observations in mind.
+// A good challenge would be trying to implement the RxJava interface:
+
+// abstract class Observable<T>
+//
 class AnyObserver(
     intSubject: IntSubject? = null,
     stringSubject: StringSubject? = null,
